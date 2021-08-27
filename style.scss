@@ -1,0 +1,67 @@
+$fonts: "Urbanist", sans-serif;
+$links: 24px;
+$centerItems: center;
+
+@mixin displayFlex() {
+  // Function that will displays flex
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: $fonts;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.title {
+  text-align: $centerItems;
+}
+
+.hello {
+  align-items: $centerItems;
+  opacity: 0.5;
+}
+
+.nav {
+  @include displayFlex();
+  justify-content: space-around;
+  flex-direction: row;
+  list-style-type: none;
+  cursor: pointer;
+  font-size: 24px;
+  &:hover {
+    transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+}
+
+.header {
+  // Landing page header
+  @include displayFlex();
+  justify-content: space-between;
+  height: 100vh;
+  width: 100vw;
+}
+
+.projects {
+  .notes {
+    width: 100vw;
+  }
+}
+
+.footer {
+  @include displayFlex();
+  justify-content: space-around;
+  list-style-type: none;
+  font-size: links;
+  .twitter,
+  .github,
+  .linkedin {
+    &:hover {
+      transform: scale(1.1);
+      opacity: 0.7;
+    }
+  }
+}
