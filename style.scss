@@ -1,81 +1,27 @@
-$fonts: "Urbanist", sans-serif;
-
-@mixin displayFlex() {
-  // Function that will displays flex
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 body {
-  font-family: $fonts;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-.header {
-  .nav {
-    @include displayFlex();
-    justify-content: space-evenly;
-    flex-direction: row;
-    list-style-type: none;
-    padding-top: 20px;
-    cursor: pointer;
-    font-size: 24px;
-  }
-
-  .header-links {
-    @include displayFlex();
-    justify-content: space-evenly;
-    list-style-type: none;
-    padding-top: 50px;
-    .twitter,
-    .github,
-    .linkedin {
-      &:hover {
-        transform: scale(1.1);
-        opacity: 0.7;
-      }
+.header-links {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  padding-top: 25px;
+  .twitter,
+  .github,
+  .linkedin {
+    &:hover {
+      transform: scale(1.1);
+      opacity: 0.7;
     }
   }
-
-  .title {
-    color: #111;
-    font-family: "Helvetica Neue", sans-serif;
-    font-size: 75px;
-    font-weight: bold;
-    letter-spacing: -1px;
-    line-height: 1;
-    text-align: center;
-    height: 100vh;
-  }
 }
-
-.main {
-  .p {
-    padding: 0 100px 0 100px;
-  }
-}
-
-.projects {
-  .notes {
-    width: 100vw;
-  }
-}
-
-.footer {
-  .footer-links {
-    @include displayFlex();
-    justify-content: space-evenly;
-    list-style-type: none;
-    .twitter,
-    .github,
-    .linkedin {
-      &:hover {
-        transform: scale(1.1);
-        opacity: 0.7;
-      }
-    }
-  }
+.title {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 75px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 0.8;
+  text-align: center;
 }
