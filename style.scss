@@ -1,6 +1,4 @@
 $fonts: "Urbanist", sans-serif;
-$links: 24px;
-$centerItems: center;
 
 @mixin displayFlex() {
   // Function that will displays flex
@@ -16,33 +14,48 @@ body {
   box-sizing: border-box;
 }
 
-.title {
-  text-align: $centerItems;
-}
+.header {
+  .nav {
+    @include displayFlex();
+    justify-content: space-evenly;
+    flex-direction: row;
+    list-style-type: none;
+    padding-top: 20px;
+    cursor: pointer;
+    font-size: 24px;
+  }
 
-.hello {
-  align-items: $centerItems;
-  opacity: 0.5;
-}
+  .header-links {
+    @include displayFlex();
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding-top: 50px;
+    .twitter,
+    .github,
+    .linkedin {
+      &:hover {
+        transform: scale(1.1);
+        opacity: 0.7;
+      }
+    }
+  }
 
-.nav {
-  @include displayFlex();
-  justify-content: space-around;
-  flex-direction: row;
-  list-style-type: none;
-  cursor: pointer;
-  font-size: 24px;
-  &:hover {
-    transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  .title {
+    color: #111;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 75px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+    text-align: center;
+    height: 100vh;
   }
 }
 
-.header {
-  // Landing page header
-  @include displayFlex();
-  justify-content: space-between;
-  height: 100vh;
-  width: 100vw;
+.main {
+  .p {
+    padding: 0 100px 0 100px;
+  }
 }
 
 .projects {
@@ -52,16 +65,17 @@ body {
 }
 
 .footer {
-  @include displayFlex();
-  justify-content: space-around;
-  list-style-type: none;
-  font-size: links;
-  .twitter,
-  .github,
-  .linkedin {
-    &:hover {
-      transform: scale(1.1);
-      opacity: 0.7;
+  .footer-links {
+    @include displayFlex();
+    justify-content: space-evenly;
+    list-style-type: none;
+    .twitter,
+    .github,
+    .linkedin {
+      &:hover {
+        transform: scale(1.1);
+        opacity: 0.7;
+      }
     }
   }
 }
