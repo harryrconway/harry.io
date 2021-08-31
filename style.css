@@ -202,4 +202,12 @@ body {
   --orange: #ff9c55;
   --red: #ff5555;
 }
+
+#clock {
+  opacity: 0.3;
+  font-family: "Helvetica Neue", sans-serif;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
 /*# sourceMappingURL=style.css.map */
